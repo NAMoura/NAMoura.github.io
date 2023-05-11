@@ -5,10 +5,8 @@
     --dark: #111;
     --darkGrey:#474b4f;
     --lightGrey: #6b6e70;
-    --lightGreen: #86c232;
     --orange: #ebb540;
     --golden: #ac7f20;
-    --darkGreen: #61892f;
     --transition: all 0.5 ease;
 }
 
@@ -77,7 +75,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .active{
-    color: #eb6b40!important;
+    color: var(--orange)!important;
 }
 
 /**HEADER STYLE**/
@@ -173,13 +171,14 @@ h1, h2, h3, h4, h5, h6, p{
     width: 140px;
     height: 140px;
     border-radius: 50%;
+
 }
 
 .about-img{
     background: #fff;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 7% auto 0;
     border-radius: 50%;
 }
 
@@ -187,7 +186,7 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 48px;
     text-align: center;
     margin-bottom: 35px;
-    color:#eb6b40;
+    color:var(--orange);
 }
 
 .about-container h3{
@@ -261,7 +260,9 @@ h1, h2, h3, h4, h5, h6, p{
 
 .sec-one-left{
     height: 100vh;
-    background: #474b4f;
+    background:linear-gradient(rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.60)), url(images/index/chuva.jpg) ;
+    
+    background-size: cover; 
     box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
@@ -286,12 +287,19 @@ h1, h2, h3, h4, h5, h6, p{
     opacity: 0.8;
 }
 
+.sec-one-right{
+    border: 2px solid;
+    border-color: #ddd;
+    text-align: center;
+    padding: 10px;
+}
 .sec-one-right h3{
     color: #6b6e70;
+    font-size: 28px;
 }
 
-.sec-one-right > h3{
-    text-align: center;
+.sec-one-right > h4{
+    color: #6b6e70;
 }
 
 .sec-one-right p {
@@ -299,8 +307,16 @@ h1, h2, h3, h4, h5, h6, p{
     font-weight: 300;
 }
 
+.sec-one-right a {
+    margin: auto;
+}
+
+.sec-one-right h3{
+    
+}
+
 .work-content{
-    margin: 50px 0;
+    margin: 25px 0;
 }
 
 .work-imgs{
@@ -310,13 +326,15 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .work-img-1{
-    background: #111 center/cover no-repeat;
+    background: url(images/index/index_01.jpg);
+    background-size: cover;
     height: 400px;
     transition: all 0.5 ease;
 }
 
 .work-img-2{
-    background: #111;
+    background: url(images/index/index_02.jpg);
+    background-size: cover;
     height: 400px;
     transition: all 0.5 ease;
 }
@@ -432,8 +450,28 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 5px auto;
 }
 
-.badge{
+.badge-astro{
+    background:#3e2a75;
+    width: 140px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.badge-photography{
     background:#ebb540;
+    width: 140px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.badge-adventure{
+    background:#1e8a14;
     width: 140px;
     border-radius: 5px;
     padding: 5px 0;
@@ -537,24 +575,66 @@ h1, h2, h3, h4, h5, h6, p{
 
 .footer{
     background: #111;
-    color: #fff;
-    padding: 40px;
+    padding: 15px;
     text-align: center;
+    color:#fff
 }
+
+
 
 .footer-container > div{
-    margin: 40px 0;
+    margin: 15px 0;
 }
 
-.footer-container h2{
-    color:#eb6b40;
-    font-size: 36px;
-    font-weight: 500;
-    letter-spacing: 7px;
-}
 
 .footer-container p{
     opacity: 0.7;
+}
+
+.footer-links{
+    width: 350px;
+    margin: 40px auto 0 auto;
+}
+
+.footer-links ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links ul a{
+    color: #fff;
+    font-weight: 500;
+    font-size: px;
+}
+
+.footer-social-icons{
+    width: 200px;
+    margin: 25px auto 0 auto;
+    padding-bottom: 30px;
+}
+
+.footer-social-icons ul a{
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5 ease;;
+}
+
+.footer-social-icons ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-social-icons ul a:hover{
+    background: #ebb540;
+    border-color: #ebb540;
 }
 
 
@@ -696,16 +776,6 @@ h1, h2, h3, h4, h5, h6, p{
     .blog-wrapper-sm{
         grid-template-columns: repeat(4,1fr);
     }
-
-
-
-    .footer-container{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 20px;
-    }
-
-    
 
 }
     
