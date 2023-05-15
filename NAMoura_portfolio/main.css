@@ -505,7 +505,7 @@ h1, h2, h3, h4, h5, h6, p{
 /** CONTACT **/
 
 .section-five{
-    margin: 40px;
+    margin: 40px auto;
 }
 
 .section-five .container div{
@@ -646,7 +646,7 @@ h1, h2, h3, h4, h5, h6, p{
     .contact-middle{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-column-gap: 20px
+        grid-column-gap: 20px;
     }
 
 }
